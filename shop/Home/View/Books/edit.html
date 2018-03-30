@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<form action="{:U('editSave')}" method="post">
+    <input type="hidden" value="{$data.id}" name="id">
+    书名：<input type="text" name="name" value="{$data.name}"><br>
+    价钱：<input type="text" name="price" value="{$data.price}"><br>
+    状态：<input type="radio" name="status" value="0" checked>可卖
+    <input type="radio" name="status" value="1" <if condition="$data['status'] eq 1">checked</if> >不可卖 <br>
+    <input type="submit">
+</form>
+</body>
+</html>

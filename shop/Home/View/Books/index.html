@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<a href="{:U('add')}">添加</a>
+<table border="1" cellpadding="10" cellspacing="0">
+    <tr>
+        <th>编号</th>
+        <th>书名</th>
+        <th>价钱</th>
+        <th>状态</th>
+        <th>创建时间</th>
+        <th>修改时间</th>
+        <th>操作</th>
+    </tr>
+    <volist name="list" id="val">
+        <tr>
+            <td>{$val.id}</td>
+            <td>{$val.name}</td>
+            <td>{$val.price}</td>
+            <td>{$val.status_text}</td>
+            <td>{$val.create_time_text}</td>
+            <td>{$val.update_time_text}</td>
+            <td>
+                <a href="{:U('edit',['id'=>$val['id']])}">编辑</a>
+                <a href="">删除</a>
+            </td>
+
+        </tr>
+    </volist>
+</table>
+</body>
+</html>
